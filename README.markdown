@@ -7,9 +7,18 @@ Form2Obj lets you write less code to read data from Android EditTexts to set you
 
 ### Setup
 
-1. TODO
+1. Download the library jar [available here](https://github.com/downloads/toshikurauchi/Form2Obj/form2obj-v0.8.jar).
+2. Create the *lib* folder (if you haven't done so yet).
+3. Add the library jar to the *lib* folder and then add it to the project's build path.
 
 ### Usage
+
+Create your EditTexts naming their ids after the attribute they represent. For example: for the attribute *name* you can create an EditText with *id/name* as its id.
+You can alternatively create a prefix for all your ids that refer to some attribute: *id/myprefix_name* following our example.
+
+In order to set your objects attributes you need an instance of Form2Obj. Then you just have to call *assign(yourFormsViewGroup, yourObject)*. 
+
+### Example
 
 Supose you have the following class:
 
