@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Form2ObjExample</string>
+    <string name="result_here">Result will be displayed here</string>
+    <string name="submit">Submit</string>
+    <string name="phone">Phone:</string>
+    <string name="name">Name:</string>
+    <string name="form2obj_with_prefix">Form2Obj with Prefix</string>
+    <string name="ignored">Ignored field:</string>
+
+</resources>
