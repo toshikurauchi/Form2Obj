@@ -25,6 +25,16 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:id="@+id/phone" />
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/age" />
     <Button 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
