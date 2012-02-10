@@ -5,8 +5,10 @@ public class Contact {
 	private String phone;
 	private int age;
 	
+	Address address;
+	
 	@Override
 	public String toString() {
-		return name + " - " + phone + " - " + age;
+		return name + " - " + phone + " - " + age + " - " + address.toString();
 	}
 }

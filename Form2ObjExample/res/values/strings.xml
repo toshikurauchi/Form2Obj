@@ -9,5 +9,8 @@
     <string name="form2obj_with_prefix">Form2Obj with Prefix</string>
     <string name="ignored">Ignored field:</string>
     <string name="age">Age:</string>
+    <string name="street">Street:</string>
+    <string name="number">Number:</string>
+    <string name="city">City:</string>
 
 </resources>

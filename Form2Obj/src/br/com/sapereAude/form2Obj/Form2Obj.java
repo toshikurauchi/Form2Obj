@@ -20,18 +20,48 @@ public class Form2Obj {
 	public void assign(ViewGroup formParent, Object toObj, String prefix) {
 		for (int i = 0; i < formParent.getChildCount(); i++) {
 			if(formParent.getChildAt(i) instanceof EditText) {
-				EditText campo = (EditText) formParent.getChildAt(i);
-				try {
-					Field field = toObj.getClass().getDeclaredField(findName(prefix, campo.getId()));
-					field.setAccessible(true);
-					field.set(toObj, valueOf(field.getType(), campo.getEditableText().toString()));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				EditText editText = (EditText) formParent.getChildAt(i);
+				setFieldRecursively(toObj, findNames(prefix, editText.getId()), 0, editText.getEditableText().toString());
 			}
 		}
 	}
 	
+	// TODO Not working!
+	private void setFieldRecursively(Object obj, String[] fieldNames, int position, String fieldValue) {
+		try {
+			Field field = obj.getClass().getDeclaredField(fieldNames[position]);
+			field.setAccessible(true);
+			Object value;
+			if(position < fieldNames.length - 1) {
+				value = field.get(obj);
+				if(value == null) {
+					value = field.getType().newInstance();
+				}
+				setFieldRecursively(value, fieldNames, position + 1, fieldValue);
+			}
+			else {
+				value = valueOf(field.getType(), fieldValue);
+			}
+			field.set(obj, value);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+//		if(position >= fieldNames.length) {
+//			return fieldValue;
+//		}
+//		try {
+//			Field field = obj.getClass().getDeclaredField(fieldNames[position]);
+//			field.setAccessible(true);
+//			field.set(obj, valueOf(field.getType(), fieldValue));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+	}
+
 	private Object valueOf(Class<?> type, String string) {
 		if(type.equals(Integer.class) || type.equals(int.class)) {
 			return Integer.valueOf(string);
@@ -62,11 +92,11 @@ public class Form2Obj {
 		return string;
 	}
 
-	private String findName(String prefix, int id) {
+	private String[] findNames(String prefix, int id) {
 		String fullName = res.getResourceName(id);
 		int index = fullName.lastIndexOf('/' + getPrefix(prefix)) + 1 + prefix.length();
 		if(index < fullName.length()) {
-			return fullName.substring(index);
+			return fullName.substring(index).split("_");
 		}
 		return null;
 	}
