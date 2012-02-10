@@ -5,8 +5,24 @@ public class Contact {
 	private String phone;
 	private int age;
 	
-	Address address;
+	private Address address;
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
 		return name + " - " + phone + " - " + age + " - " + address.toString();

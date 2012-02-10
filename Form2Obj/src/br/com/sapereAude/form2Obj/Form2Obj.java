@@ -26,7 +26,6 @@ public class Form2Obj {
 		}
 	}
 	
-	// TODO Not working!
 	private void setFieldRecursively(Object obj, String[] fieldNames, int position, String fieldValue) {
 		try {
 			Field field = obj.getClass().getDeclaredField(fieldNames[position]);
@@ -46,20 +45,6 @@ public class Form2Obj {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-//		if(position >= fieldNames.length) {
-//			return fieldValue;
-//		}
-//		try {
-//			Field field = obj.getClass().getDeclaredField(fieldNames[position]);
-//			field.setAccessible(true);
-//			field.set(obj, valueOf(field.getType(), fieldValue));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
 	}
 
 	private Object valueOf(Class<?> type, String string) {
