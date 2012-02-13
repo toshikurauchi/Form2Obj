@@ -1,7 +1,6 @@
-Form2ObjExample/bin/*
-Form2ObjExample/gen/*
-Form2Obj/bin/*
-Form2Obj/gen/*
+*/bin/*
+*/gen/*
+*/tmp/*
 *.apk
 *.class
 *.dex

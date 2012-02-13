@@ -22,7 +22,7 @@ public class Form2ObjExampleWithPrefix extends Activity {
         button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				new Form2Obj(getResources()).assign((ViewGroup) findViewById(R.id.form), contact, "field");
+				new Form2Obj(getResources()).toObj((ViewGroup) findViewById(R.id.form), contact, "field");
 				
 				TextView result = (TextView) findViewById(R.id.result);
 				result.setText(contact.toString());

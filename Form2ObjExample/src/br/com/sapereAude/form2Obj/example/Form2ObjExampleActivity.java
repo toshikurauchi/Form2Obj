@@ -23,7 +23,7 @@ public class Form2ObjExampleActivity extends Activity {
         button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				new Form2Obj(getResources()).assign((ViewGroup) findViewById(R.id.form), contact);
+				new Form2Obj(getResources()).toObj((ViewGroup) findViewById(R.id.form), contact);
 				
 				TextView result = (TextView) findViewById(R.id.result);
 				result.setText(contact.toString());
