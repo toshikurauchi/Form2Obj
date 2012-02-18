@@ -3,7 +3,6 @@
 
     <string name="app_name">Form2ObjExample</string>
     <string name="result_here">Result will be displayed here</string>
-    <string name="submit">Submit</string>
     <string name="phone">Phone:</string>
     <string name="name">Name:</string>
     <string name="form2obj_with_prefix">Form2Obj with Prefix</string>
@@ -12,5 +11,7 @@
     <string name="street">Street:</string>
     <string name="number">Number:</string>
     <string name="city">City:</string>
+    <string name="form_to_obj">Form to Object</string>
+    <string name="obj_to_form">Object to Form</string>
 
 </resources>

@@ -71,8 +71,14 @@
 	    <Button 
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="@string/submit"
-	        android:id="@+id/button"
+	        android:text="@string/form_to_obj"
+	        android:id="@+id/formToObj"
+	        />
+	    <Button 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/obj_to_form"
+	        android:id="@+id/objToForm"
 	        />
 	    <TextView 
 	        android:layout_width="fill_parent"

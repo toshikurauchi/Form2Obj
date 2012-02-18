@@ -18,14 +18,24 @@ public class Form2ObjExampleWithPrefix extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_with_prefix);
         
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new OnClickListener() {
+        contact = Contact.makeDefault();
+        
+        Button makeObj = (Button) findViewById(R.id.formToObj);
+        makeObj.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				new Form2Obj(getResources()).toObj((ViewGroup) findViewById(R.id.form), contact, "field");
 				
 				TextView result = (TextView) findViewById(R.id.result);
 				result.setText(contact.toString());
+			}
+		});
+        
+        Button makeForm = (Button) findViewById(R.id.objToForm);
+        makeForm.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				new Form2Obj(getResources()).toForm(contact, (ViewGroup) findViewById(R.id.form), "field");
 			}
 		});
     }

@@ -27,4 +27,20 @@ public class Contact {
 	public String toString() {
 		return name + " - " + phone + " - " + age + " - " + address.toString();
 	}
+
+	public static Contact makeDefault() {
+		Contact contact = new Contact();
+		Address address = new Address();
+		
+		address.setCity("Random City");
+		address.setNumber(123);
+		address.setStreet("1st Street");
+		
+		contact.address = address;
+		contact.age = 24;
+		contact.name = "Toshi Kurauchi";
+		contact.phone = "12345678";
+		
+		return contact;
+	}
 }
