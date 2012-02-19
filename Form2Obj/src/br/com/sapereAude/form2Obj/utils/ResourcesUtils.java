@@ -11,7 +11,8 @@ public class ResourcesUtils {
 
 	public String[] findNames(String prefix, int id) {
 		String fullName = res.getResourceName(id);
-		int index = fullName.lastIndexOf('/' + getPrefix(prefix)) + 1 + prefix.length();
+		prefix = getPrefix(prefix);
+		int index = fullName.lastIndexOf('/' + prefix) + 1 + prefix.length();
 		if(index < fullName.length()) {
 			return fullName.substring(index).split("_");
 		}
