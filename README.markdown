@@ -96,7 +96,11 @@ Or:
     new Form2Obj(activity.getResources())
                   .toForm(myObj, (ViewGroup) findViewById(R.id.form), "myPrefix");
 
-### More info & contact:
+### Full example
+
+Available [here](https://github.com/toshikurauchi/Form2Obj/tree/master/Form2ObjExample)
+
+### More info & contact
 
 andrew dot kurauchi at gmail dot com
 
@@ -196,6 +200,10 @@ Ou:
     new Form2Obj(activity.getResources())
                   .toForm(meuObjeto, (ViewGroup) findViewById(R.id.formulario), "meuPrefixo");
 
-### Mais informações e contato:
+### Exemplo completo
+
+Disponível [aqui](https://github.com/toshikurauchi/Form2Obj/tree/master/Form2ObjExample)
+
+### Mais informações e contato
 
 andrew ponto kurauchi arroba gmail ponto com
